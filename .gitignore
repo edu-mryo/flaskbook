@@ -236,7 +236,7 @@ cython_debug/
 # mkdocs documentation
 
 # mypy
-
+p
 # Pyre type checker
 
 # pytype static type analyzer
