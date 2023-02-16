@@ -7,6 +7,15 @@
   </head>
   <body>
     <h2>Contact Form</h2>
+
+    {% with messages = get_flashed_messages()%} {% if messages %}
+    <ul>
+      {% for message in messages %}
+      <li class="flash">{{message}}</li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% endwith %}
+
     <form
       action="{{url_for('contact_complete')}}"
       method="POST"
@@ -45,6 +54,7 @@
           </td>
         </tr>
       </table>
+      <input type="submit" value="Contact" />
     </form>
   </body>
 </html>
